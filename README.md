@@ -56,11 +56,11 @@ Matrix outputData = new Matrix(new double[][]{
 Skeleton skeleton = new Skeleton();
 
 skeleton.add(new LayerSkeleton(2,4));
-skeleton.add(new LayerSkeleton("relu"));
+skeleton.add(new LayerSkeleton(ReLU));
 skeleton.add(new LayerSkeleton(4,4));
-skeleton.add(new LayerSkeleton("relu"));
+skeleton.add(new LayerSkeleton(ReLU));
 skeleton.add(new LayerSkeleton(4,3));
-skeleton.add(new LayerSkeleton("relu"));
+skeleton.add(new LayerSkeleton(ReLU));
 skeleton.add(new LayerSkeleton(3,1));
 
 
