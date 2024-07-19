@@ -23,7 +23,7 @@ tasks.test {
 publishing {
     repositories {
         maven {
-            name = "Neat4j"
+            name = "GitHubPackages"
             url = uri("https://maven.pkg.github.com/burhancabiroglu/Neat4j")
             credentials {
                 username = project.findProperty("gpr.user") as String? ?: System.getenv("GITHUB_ACTOR")
