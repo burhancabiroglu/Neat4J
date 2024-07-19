@@ -1,11 +1,10 @@
 package com.cabir.layer;
 
 
+import com.cabir.core.annotation.ActivationAnnotation;
+import com.cabir.core.annotation.LayerAnnotation;
 import com.cabir.core.base.Layer;
-import com.cabir.jmatx.annotation.ActivationAnnotation;
-import com.cabir.jmatx.annotation.LayerAnnotation;
-import com.cabir.jmatx.math.*;
-
+import com.cabir.math.*;
 
 @LayerAnnotation(type = LayerAnnotation.Activation)
 public class Activation extends Layer {
