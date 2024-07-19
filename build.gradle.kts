@@ -21,20 +21,20 @@ tasks.test {
 }
 
 publishing {
+    publications {
+        register<MavenPublication>("gpr") {
+            artifactId = "neat4j"
+            from(components["java"])
+        }
+    }
     repositories {
         maven {
-            name = "GitHubPackages"
+            name = "Neat4j"
             url = uri("https://maven.pkg.github.com/burhancabiroglu/Neat4j")
             credentials {
                 username = project.findProperty("gpr.user") as String? ?: System.getenv("GITHUB_ACTOR")
                 password = project.findProperty("gpr.token") as String? ?: System.getenv("GITHUB_TOKEN")
             }
-        }
-    }
-    publications {
-        register<MavenPublication>("gpr") {
-            artifactId = "neat4j"
-            from(components["java"])
         }
     }
 }
